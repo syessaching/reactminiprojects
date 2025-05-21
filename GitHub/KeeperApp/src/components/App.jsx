@@ -25,6 +25,13 @@ const App= () => {
   });
   });
   }
+  function editNote(id, updatedNote) {
+    setNotes(prevNotes =>
+      prevNotes.map((note, index) => 
+        index === id ? updatedNote : note
+      )
+    );
+  }
 
   return(
   <div>
@@ -33,10 +40,11 @@ const App= () => {
     {notes.map((noteItem, index) => (
     <Note 
     key={index} 
+    id={index}
     title={noteItem.title} 
     content={noteItem.content} 
     onDelete={deleteNote}
-    id={index}
+    onEdit={editNote} 
      />
   ))}    
   <Footer />
