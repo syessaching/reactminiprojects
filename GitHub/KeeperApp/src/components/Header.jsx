@@ -1,12 +1,11 @@
 import React from "react";
-import HighlightIcon from "@mui/icons-material/Highlight";
-
+import EditNoteIcon from '@mui/icons-material/EditNote';
 
 const Header = () => {
     return (
         <header>
           <h1>
-            <HighlightIcon />
+            <EditNoteIcon />
             Keeper
           </h1>
         </header>
