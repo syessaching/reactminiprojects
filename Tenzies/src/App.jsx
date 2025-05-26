@@ -32,20 +32,21 @@ function App() {
       }))
   }
 
-  function rollDice(){
-    setDice(prevDice =>
-      prevDice.map(die =>
-      {
-        if(die.isHeld){
-          return die;
-        }else{
-          return {
-            ...die,
-            value:Math.ceil(Math.random() *6)
-          }
-        }
-    }))
+  function rollDice() {
+    if (gameWon) {
+      setDice(generateAllNewDice());
+      setGameWon(false); // reset the win state
+    } else {
+      setDice(prevDice =>
+        prevDice.map(die =>
+          die.isHeld
+            ? die
+            : { ...die, value: Math.ceil(Math.random() * 6) }
+        )
+      );
+    }
   }
+
   function holdDice(id){
     setDice(prevDice => 
       prevDice.map(die => 
@@ -81,7 +82,7 @@ function App() {
         </div>  
 
         <button onClick= {rollDice} className='roll-button'>
-          Roll Dice
+          {gameWon ? "New Game" : "Roll Dice"}
         </button>
       </main>
     </>
