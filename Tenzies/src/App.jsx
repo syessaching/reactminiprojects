@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Die from './Die.jsx'
+import {nanoid} from "nanoid"
 
 
 
@@ -14,7 +15,8 @@ function App() {
       .fill(0)
       .map(() => ({
         value: Math.ceil(Math.random() * 6),
-        isHeld:false
+        isHeld:true,
+        id:nanoid()
       }))
   }
 
