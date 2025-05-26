@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Die from './Die.jsx'
 import {nanoid} from "nanoid"
-
+import { useEffect } from 'react'
 
 
 function App() {
@@ -9,6 +9,14 @@ function App() {
   const [dice, setDice]= useState(generateAllNewDice())
   const [gameWon, setGameWon] = useState(false)
 
+  useEffect(() => {
+    const allHeld = dice.every(die => die.isHeld)
+    const firstValue = dice[0].value
+    const allSameValue =dice.every(die => die.value ===firstValue)
+
+    if (allHeld && allSameValue){
+            setGameWon(true)}
+    }, [dice])
 
   function generateAllNewDice(){
     return new Array(10)
@@ -61,6 +69,8 @@ function App() {
       <main> 
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+        
+        {gameWon && <h1 className= "win-message"> You won! </h1>}
         <div className='dice-container'>
           {diceElements}
         </div>  

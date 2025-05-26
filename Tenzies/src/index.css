@@ -94,3 +94,9 @@ main{
 .roll-button:hover{
     background-color: #362fc4;
 }
+
+.win-message{
+    font-size: 2rem;
+    color: #59E391;
+    margin-bottom: 10px;
+}
