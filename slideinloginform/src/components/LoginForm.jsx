@@ -38,33 +38,34 @@ function LoginForm() {
         </div>
 
         {/* Sign In Container */}
-        <div className={`absolute top-0 h-full w-1/2 transition-all duration-600 ease-in-out left-0 z-[2] ${
-          !isSignIn ? "transform translate-x-full" : ""
-        }`}>
-          <div className="bg-white h-full flex items-center justify-center flex-col p-12 text-center">
-            <h1 className="font-bold text-3xl mb-6">Sign in</h1>
-            <div className="w-full max-w-xs">
-              <input
-                type="email"
-                placeholder="Email"
-                className="bg-gray-100 border-none p-3 my-2 w-full"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="bg-gray-100 border-none p-3 my-2 w-full"
-              />
-              <a href="#" className="text-gray-500 text-sm my-3 no-underline hover:underline">
-                Forgot your password?
-              </a>
-              <button className="rounded-3xl border border-red-400 bg-red-400 text-white text-xs font-bold py-3 px-12 uppercase tracking-wider mt-4 transition-transform focus:outline-none active:scale-95">
-                Sign In
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Overlay Container */}
+           <div className={`absolute top-0 h-full w-1/2 transition-all duration-600 ease-in-out left-0 z-[2] ${
+                !isSignIn ? "transform translate-x-full" : ""
+                }`}>
+                <div className="bg-white h-full flex items-center justify-center flex-col p-12 text-center">
+                    <h1 className="font-bold text-3xl mb-6">Sign in</h1>
+                    <div className="w-full max-w-xs">
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        className="bg-gray-100 border-none p-3 my-2 w-full"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        className="bg-gray-100 border-none p-3 my-2 w-full"
+                    />
+                    
+                    {/* SIGN IN button with Forgot password link below it */}
+                    <button className="w-full rounded-3xl border border-red-400 bg-red-400 text-white text-xs font-bold py-3 px-12 uppercase tracking-wider mt-4 transition-transform focus:outline-none active:scale-95">
+                        SIGN IN
+                    </button>
+                    <a href="#" className="text-gray-500 text-sm no-underline hover:underline block text-center mt-2">
+                        Forgot your password?
+                    </a>
+                    </div>
+                </div>
+                </div>
+            {/* Overlay Container */}
         <div className={`absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-600 ease-in-out z-[100] ${
           !isSignIn ? "transform -translate-x-full" : ""
         }`}>
