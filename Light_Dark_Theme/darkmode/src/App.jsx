@@ -5,12 +5,12 @@ import { LuMoon } from "react-icons/lu";
 
 const App = () => {
   return(
-    <div className="bg-white grid place-items-center h-screen w-full">
-      <div className="bg-zinc-100 p-2 rounded-xl gap-4">
-        <button className="bg-transparent hover:bg-zinc-200 rounded-lg text-black p-3">
+    <div className="bg-white dark:bg-zinc-800 grid place-items-center h-screen w-full dark">
+      <div className="bg-zinc-100 dark:bg-zinc-700 p-2 rounded-xl">
+        <button className="bg-transparent p-3 hover:bg-zinc-200  dark:hover:bg-zinc-100/10 rounded-lg text-black dark:text-white">
         <LuSun />
         </button>
-        <button className="bg-transparent hover:bg-zinc-200 rounded-lg text-black p-3">
+        <button className="bg-transparent p-3 hover:bg-zinc-200  dark:hover:bg-zinc-100/10 rounded-lg text-black dark:text-white">
         <LuMoon />
         </button>
 
