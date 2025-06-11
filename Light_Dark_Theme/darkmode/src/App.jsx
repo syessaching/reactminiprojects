@@ -20,6 +20,7 @@ const App = () => {
 
       <main className="flex-grow grid place-items-center text-black dark:text-white">
         <h2 className="text-3xl">Welcome to CampusDash!</h2>
+        <a href="#" className=" text-2xl hover:underline">Join now or log back in!</a>
       </main>
 
       <Footer />

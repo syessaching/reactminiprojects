@@ -9,6 +9,8 @@ const Nav = ({ theme, setTheme }) => {
       <div className="flex items-center gap-4">
         <a href="#" className="hover:underline">Trips</a>
         <a href="#" className="hover:underline">Profile</a>
+        <a href="#" className="hover:underline">Settings</a>
+
         <button
           onClick={() => setTheme("light")}
           className="p-2 hover:bg-zinc-200 dark:hover:bg-zinc-100/10 rounded-lg"
